@@ -5,7 +5,7 @@
 
 The mechanical component is the fundamental pillar of the waste sorting conveyor system. It must guarantee the robustness, precision, and ergonomics required to ensure reliable operation in accordance with specifications. This report details every aspect of the project's design, modeling, and mechanical implementation.
 
-[📥 Download SolidWorks Files](/solidworks.zip)
+[📥 Download SolidWorks Files](/tekbot_docs/solidworks.zip)
 
 [See pictures and Videos ](/media)
 
