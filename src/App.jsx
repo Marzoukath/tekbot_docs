@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Media from "./pages/Media"
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename="/tekbot_docs/">
       {/* NAVBAR */}
       <nav className="p-4 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 text-white flex justify-between items-center shadow-md">
         <h1 className="text-2xl font-extrabold tracking-wide">⚙️ The Winners - EPAC</h1>
