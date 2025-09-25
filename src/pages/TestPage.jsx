@@ -123,6 +123,12 @@ export default function TestPage() {
                   />
                 );
               },
+              img: ({ node, ...props }) => {
+                const src = props.src.startsWith('/')
+                  ? `${import.meta.env.BASE_URL}${props.src.slice(1)}`
+                  : `${import.meta.env.BASE_URL}${props.src}`;
+                return <img {...props} src={src} alt={props.alt || ''} />;
+              },
               h1: ({ node, ...props }) => {
                 const slug = String(props.children).toLowerCase().replace(/\s+/g, "-");
                 return <h1 id={slug} {...props} />;
