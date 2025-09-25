@@ -45,7 +45,8 @@ export default function TestPage() {
   const [headings, setHeadings] = useState([]);
 
   useEffect(() => {
-    fetch(`/docs/${pool}/${testId}.md`)
+    const basePath = import.meta.env.BASE_URL || '';
+    fetch(`${basePath}/docs/${pool}/${testId}.md`)
       .then((res) => res.text())
       .then((md) => {
         setContent(md);

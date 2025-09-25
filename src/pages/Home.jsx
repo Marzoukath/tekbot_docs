@@ -4,7 +4,8 @@ export default function Home() {
   return (
     <div 
       className="text-center min-h-screen flex flex-col justify-center items-center bg-cover bg-center relative"
-      style={{ backgroundImage: "url('/images/home-bg.jpg')" }}
+      style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/home-bg.jpg)` }}
+
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>

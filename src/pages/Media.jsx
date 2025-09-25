@@ -23,7 +23,9 @@ export default function Media() {
   const [headings, setHeadings] = useState([]);
 
   useEffect(() => {
-    fetch("/docs/assembly.md")
+    const basePath = import.meta.env.BASE_URL || '';
+   
+    fetch(`${basePath}/docs/assembly.md`)
       .then((res) => res.text())
       .then((md) => {
         setContent(md);

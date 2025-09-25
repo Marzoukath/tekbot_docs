@@ -33,7 +33,9 @@ export default function About() {
 
   // Charger le markdown sélectionné
   useEffect(() => {
-    fetch(`/docs/about/${files[currentTab]}`)
+    const basePath = import.meta.env.BASE_URL || '';
+   
+    fetch(`${basePath}/docs/about/${files[currentTab]}`)
       .then((res) => {
         if (!res.ok) throw new Error("Fichier introuvable");
         return res.text();

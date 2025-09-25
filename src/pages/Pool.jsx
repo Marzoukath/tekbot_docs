@@ -22,15 +22,16 @@ const testsByPool = {
 };
 
 const poolBackgrounds = {
-  it: "/images/it-bg.jpg",
-  electronique: "/images/electronique-bg.jpg",
-  mecanique: "/images/mecanique-bg.jpg"
+  it: `${import.meta.env.BASE_URL}images/it-bg.jpg`,
+  electronique: `${import.meta.env.BASE_URL}images/electronique-bg.jpg`,
+  mecanique: `${import.meta.env.BASE_URL}images/mecanique-bg.jpg`
 };
+
 
 export default function Pool() {
   const { pool } = useParams();
   const tests = testsByPool[pool] || [];
-  const bgImage = poolBackgrounds[pool] || "/images/home-bg.png";
+  const bgImage = poolBackgrounds[pool] || `${import.meta.env.BASE_URL}images/home-bg.png`;
 
   return (
     <div
